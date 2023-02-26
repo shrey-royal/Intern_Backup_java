@@ -71,5 +71,16 @@ public class Basic {
  *  0	1
  *  1	0
  *  
+ *  Bitwise Shift Operators -> <<, >>, >>>
+ *  
+ *  << (left shift)
+ *  
+ *  25<<2;
+ *  
+ *  0110 0100 << 2 -> 100
+ *  
+ *  
+ *  
+ *  
  *  
  * */
