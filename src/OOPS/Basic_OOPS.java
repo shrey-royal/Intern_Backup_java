@@ -1,40 +1,35 @@
-package OOPS;
+package OOPS;	//encapsulation
 
-class Animal{
-	public void eat() {
-		System.out.println("Animal is Eating...");
+abstract class Calculator{	//abstract class
+	protected int Addition(int a, int b) {
+		return a+b;
+	}	//hidden methods
+	
+	protected int Addition(int a, int b, int c) {		//method overloading
+		return a+b+c;
 	}
-	void sleep() {
-		System.out.println("Animal is sleeping...");
+}	//encapsulation
+
+class SubCalc extends Calculator{
+	public int add(int a, int b) {
+		return super.Addition(a, b);
+	}
+	
+	public int add(int a, int b, int c) {
+		return super.Addition(a, b, c);
 	}
 }
 
-class Dog extends Animal {
-	public void bark() {
-		System.out.println("Dog is barking...");
-	}
-}
-
-class Cat extends Animal{
-	public void meow() {
-		System.out.println("Cat is meowing...");
-	}
-}
 
 public class Basic_OOPS {
-
 	public static void main(String[] args) {
 		
-		Dog d = new Dog();
-		d.bark();
-		d.eat();
-		d.sleep();
+//		SubCalc s = new SubCalc();
+//		System.out.println(s.Addition(1, 2));
 		
-		Cat c = new Cat();
-		c.meow();
-		c.eat();
-		c.sleep();
-		
+		SubCalc c = new SubCalc();
+		System.out.println(c.add(1, 2));
+		System.out.println(c.add(1, 2, 3));
 
 	}
 
@@ -68,8 +63,6 @@ public class Basic_OOPS {
  * 1. Single
  * one parent class -> one child class
  * 
- * 
- * 
  * 2. Multiple -> not supported in java
  * multiple base classes -> single child class
  * 
@@ -79,11 +72,14 @@ public class Basic_OOPS {
  * 4. Hierarchical
  * one base class -> multiple child classes
  * 
- * 
- * 5. Hybrid
+ * 5. Hybrid	
+ * when we combine two or more types of inheritance.
  * 
  * 
  * 2. Polymorphism -> code overwrite (many forms)
+ * -> performing one task using different ways
+ * -> overloading/overriding
+ * 
  * 3. Abstraction -> data hiding (show functionality only)
  * 4. Encapsulation -> data wrapping/binding
  * 
